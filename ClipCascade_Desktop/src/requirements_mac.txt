@@ -11,3 +11,4 @@ xxhash==3.5.0
 beautifulsoup4==4.12.3
 aiortc==1.10.0
 pyinstaller==6.17.0
+keyring>=25.0.0

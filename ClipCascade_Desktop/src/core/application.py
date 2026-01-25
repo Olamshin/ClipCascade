@@ -254,12 +254,7 @@ class Application:
         try:
             self._get_ws_manager().disconnect()
             self.request_manager.logout()
-            self.config.data["hashed_password"] = None
-            self.config.data["cookie"] = None
-            self.config.data["maxsize"] = None
-            self.config.data["password"] = ""
-            self.config.data["csrf_token"] = ""
-            self.config.save()
+            self.config.clear_credentials()
         except Exception as e:
             raise Exception(f"Error during logging off: {e}")
 
